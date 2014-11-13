@@ -222,6 +222,9 @@ var resetPositions = function() {
     createEnemies();
     key = new Key((keyX[Math.floor(Math.random()*keyX.length)]), (keyY[Math.floor(Math.random()*keyY.length)]));
     jewel = shuffleJewels(jewelList);
+    if(jewel.y > 342) {
+        jewel.y -= 400;
+    }
 };
 
 //Checking for collisions and resetting positions of player
