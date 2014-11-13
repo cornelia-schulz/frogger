@@ -210,7 +210,6 @@ function shuffleJewels(array) {
         array[current] = array[top];
         array[top] = tmp;
     }
-        console.log(array[0])
         return array[0];
     }
 

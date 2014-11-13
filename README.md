@@ -1,7 +1,6 @@
-frontend-nanodegree-arcade-game
+FROGGER
 ===============================
 
-Frogger
 
 To play use the arrow keys on the keyboard.
 
