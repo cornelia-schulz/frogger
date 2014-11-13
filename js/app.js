@@ -222,6 +222,9 @@ var resetPositions = function() {
     createEnemies();
     key = new Key((keyX[Math.floor(Math.random()*keyX.length)]), (keyY[Math.floor(Math.random()*keyY.length)]));
     jewel = shuffleJewels(jewelList);
+    if(jewel.y > 342) {
+        jewel.y -= 400;
+    }
 };
 
 //Checking for collisions and resetting positions of player
@@ -270,7 +273,7 @@ var collectKey = function() {
 //Player collects jewels and gets points
 var hasJewel = false;
 var collectJewel = function() {
-    if (player.x <= (jewel.x + 90) && jewel.x <= (player.x + 90) && player.y <= (jewel.y + 63) && jewel.y <= (player.y + 63)) {
+    if (player.x <= (jewel.x + 90) && jewel.x <= (player.x + 90) && player.y <= (jewel.y + 50) && jewel.y <= (player.y + 50)) {
         hasJewel = true;
         jewel.move();
         points += jewel.points;

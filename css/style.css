@@ -6,9 +6,10 @@ button {
     width: 30%;
     font-size: 0.8em;
     background-color: orange;
+    color: white;
 }
 
-a {
+a, a:hover {
     text-decoration: none;
     color: white;
 }
