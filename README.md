@@ -1,8 +1,17 @@
 FROGGER
 ===============================
 
+This is my version of the classic arcade game Frogger.
 
-To play use the arrow keys on the keyboard.
+
+Game Play
+===============================
+
+To play it go to the following page:
+
+http://firzhugh.github.io/frogger/
+
+To move the player use the arrow keys on the keyboard.
 
 Aim of the game is to collect jewels for points and get the key to proceed through one of the gates at the top.
 
