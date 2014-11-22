@@ -354,3 +354,4 @@ var newGame = function() {
 $('.button').click(function() {
     newGame();
 });
+
