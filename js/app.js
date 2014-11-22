@@ -77,7 +77,7 @@ Player.prototype.handleInput = function() {
 var Exit = function(x, y) {
     this.x = x;
     this.y=y;
-    this.sprite = 'images/keyhole.png';
+    this.sprite = "images/keyhole.png";
     this.width = 80;
     this.height = 75;
 };
@@ -107,7 +107,7 @@ var Key = function(x, y) {
     this.speed = 400;
     this.height = 155;
     this.width = 101;
-    this.sprite = 'images/Key.png'
+    this.sprite = "images/Key.png";
     this.move = function() {
         this.y += this.speed;
     }
@@ -139,7 +139,7 @@ Jewel.prototype.render = function() {
 };
 
 var Life = function() {
-    this.sprite = 'images/Heart.png';
+    this.sprite = "images/Heart.png";
     this.height = 60;
     this.width = 40;
     this.number = 3;
@@ -154,7 +154,7 @@ Life.prototype.render = function() {
     }
     if(this.number == 0) {
         //gameOver();
-        console.log('Game over')
+        console.log("Game over")
     }
 };
 
@@ -237,7 +237,7 @@ var checkCollisions = function() {
                 resetPositions();
             }
             else {
-                console.log('You did not survive');
+                console.log("You did not survive");
                 gameOver();
             }
         }
@@ -252,7 +252,7 @@ var dontWalkOnWater = function() {
             resetPositions();
         }
         else {
-            console.log('You did not survive');
+            console.log("You did not survive");
             gameOver();
         }
     }
@@ -298,14 +298,14 @@ var completeTask = function(){
 
 //Game is over
 var gameOver = function() {
-    document.getElementById('light-end').style.display='block';
-    document.getElementById('fade-end').style.display='block';
+    document.getElementById("light-end").style.display="block";
+    document.getElementById("fade-end").style.display="block";
 };
 
 //Sets up a new game
 var newGame = function() {
-    document.getElementById('light-end').style.display='none';
-    document.getElementById('fade-end').style.display='none';
+    document.getElementById("light-end").style.display="none";
+    document.getElementById("fade-end").style.display="none";
     resetPositions();
     lives.number = 3;
     points = 0;
@@ -319,7 +319,7 @@ $(".button").click(function() {
 
 // This listens for key presses and sends the keys to the
 // Player.handleInput() method.
-document.addEventListener('keyup', function(e) {
+document.addEventListener("keyup", function(e) {
     var allowedKeys = {
         37: 'left',
         38: 'up',
