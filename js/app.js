@@ -90,13 +90,8 @@ $(document).keydown(function(event) {
  */
 var Exit = function(x, y) {
     this.x = x;
-<<<<<<< HEAD
-    this.y=y;
-    this.sprite = "images/keyhole.png";
-=======
     this.y = y;
     this.sprite = 'images/keyhole.png';
->>>>>>> master
     this.width = 80;
     this.height = 75;
 };
@@ -136,11 +131,7 @@ var Key = function(x, y) {
     this.speed = 400;
     this.height = 155;
     this.width = 101;
-<<<<<<< HEAD
-    this.sprite = "images/Key.png";
-=======
     this.sprite = 'images/Key.png';
->>>>>>> master
     this.move = function() {
         this.y += this.speed;
     };
@@ -196,11 +187,7 @@ Life.prototype.render = function() {
     }
     if (this.number === 0) {
         //gameOver();
-<<<<<<< HEAD
-        console.log("Game over")
-=======
         console.log('Game over');
->>>>>>> master
     }
 };
 /*
@@ -285,13 +272,7 @@ var checkCollisions = function() {
             if (lives.number > 0) {
                 lives.loseLife();
                 resetPositions();
-<<<<<<< HEAD
-            }
-            else {
-                console.log("You did not survive");
-=======
             } else {
->>>>>>> master
                 gameOver();
             }
         }
@@ -305,13 +286,7 @@ var dontWalkOnWater = function() {
         if (lives.number > 0) {
             lives.loseLife();
             resetPositions();
-<<<<<<< HEAD
-        }
-        else {
-            console.log("You did not survive");
-=======
         } else {
->>>>>>> master
             gameOver();
         }
     }
@@ -360,25 +335,15 @@ var completeTask = function() {
 * player lost all of his/her lives
  */
 var gameOver = function() {
-<<<<<<< HEAD
-    document.getElementById("light-end").style.display="block";
-    document.getElementById("fade-end").style.display="block";
-=======
     document.getElementById('light-end').style.display = 'block';
     document.getElementById('fade-end').style.display = 'block';
->>>>>>> master
 };
 /*
 * prepares a new game
  */
 var newGame = function() {
-<<<<<<< HEAD
-    document.getElementById("light-end").style.display="none";
-    document.getElementById("fade-end").style.display="none";
-=======
     document.getElementById('light-end').style.display = 'none';
     document.getElementById('fade-end').style.display = 'none';
->>>>>>> master
     resetPositions();
     lives.number = 3;
     points = 0;
@@ -388,25 +353,4 @@ var newGame = function() {
 
 $('.button').click(function() {
     newGame();
-<<<<<<< HEAD
 });
-
-<<<<<<< HEAD
-// This listens for key presses and sends the keys to the
-// Player.handleInput() method.
-document.addEventListener("keyup", function(e) {
-    var allowedKeys = {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
-    };
-
-    player.handleInput(allowedKeys[e.keyCode]);
-});
-
-=======
->>>>>>> master
-=======
-});
->>>>>>> master
