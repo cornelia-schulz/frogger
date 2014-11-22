@@ -33,22 +33,26 @@ var Player = function(x, y, speed) {
     this.sprite = 'images/char-horn-girl.png';
     this.up = function () {
         if (this.y >= this.speed-10) {
-            this.y = this.y - this.speed;
+            this.y -= this.speed;
+            console.log(this.y);
         }
     };
     this.down = function () {
         if (this.y < (ctx.canvas.height - 200)) {
             this.y = this.y + this.speed;
+            console.log(this.y);
         }
     };
     this.right = function () {
         if (this.x < ctx.canvas.width - (this.speed+18)) {
             this.x = this.x + (this.speed+18);
+            console.log(this.x);
         }
     };
     this.left = function () {
         if (this.x >= this.speed) {
             this.x = this.x - (this.speed+18);
+            console.log(this.x);
         }
     };
 };
@@ -58,21 +62,29 @@ Player.prototype.update = function(dt) {
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-Player.prototype.handleInput = function() {
-    var keyPressed = String.fromCharCode(event.keyCode);
-    if(event.keyCode === 38) {
-        this.up();
-    }
-    if(event.keyCode === 40) {
-        this.down();
-    }
-    if(event.keyCode === 39) {
-        this.right();
-    }
-    if(event.keyCode === 37) {
-        this.left();
-    }
-};
+
+
+
+    $(document).keydown(function(event) {
+        var code = event.charCode || event.keyCode;
+        console.log('you pressed ' + code);
+
+        if(code === 38) {
+            player.up();
+        }
+        if(code === 40) {
+            player.down();
+        }
+        if(code === 39) {
+            player.right();
+        }
+        if(code === 37) {
+            player.left();
+        }
+        event.preventDefault();
+        return false;
+    });
+
 
 var Exit = function(x, y) {
     this.x = x;
@@ -107,10 +119,14 @@ var Key = function(x, y) {
     this.speed = 400;
     this.height = 155;
     this.width = 101;
+<<<<<<< HEAD
     this.sprite = "images/Key.png";
+=======
+    this.sprite = 'images/Key.png';
+>>>>>>> master
     this.move = function() {
         this.y += this.speed;
-    }
+    };
 };
 
 Key.prototype.render = function() {
@@ -129,7 +145,7 @@ var Jewel = function(x, y, sprite, points) {
     this.width = 101;
     this.move = function() {
         this.y += this.speed;
-    }
+    };
 };
 
 Jewel.prototype.render = function() {
@@ -152,9 +168,13 @@ Life.prototype.render = function() {
         ctx.drawImage(Resources.get(this.sprite), heartPosition, 0, this.width, this.height);
         heartPosition +=40;
     }
-    if(this.number == 0) {
+    if(this.number === 0) {
         //gameOver();
+<<<<<<< HEAD
         console.log("Game over")
+=======
+        console.log('Game over');
+>>>>>>> master
     }
 };
 
@@ -317,6 +337,7 @@ $(".button").click(function() {
     newGame();
 });
 
+<<<<<<< HEAD
 // This listens for key presses and sends the keys to the
 // Player.handleInput() method.
 document.addEventListener("keyup", function(e) {
@@ -330,3 +351,5 @@ document.addEventListener("keyup", function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
+=======
+>>>>>>> master
